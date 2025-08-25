@@ -19,7 +19,14 @@ const Home = () => {
           <Header />
           <ImageSlideshow />
           
-          <div className="relative z-10 min-h-screen flex items-center justify-center">
+          <div className="relative z-10 min-h-screen flex flex-col items-center justify-center">
+            <div className="text-center px-6 mb-8">
+              <img 
+                src="/lovable-uploads/nihaara-logo.png" 
+                alt="Nihaara Architects" 
+                className="h-24 md:h-32 lg:h-40 w-auto mx-auto animate-fade-in"
+              />
+            </div>
             <div className="text-center px-6">
               <h1 className="tagline text-white animate-fade-in">
                 Edges of today, echoes of tomorrow.

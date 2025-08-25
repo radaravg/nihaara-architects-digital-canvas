@@ -24,9 +24,9 @@ const LogoAnimation = ({ onComplete }: LogoAnimationProps) => {
     >
       <div className="animate-zoom-in">
         <img 
-          src="/lovable-uploads/1479b4ce-2d78-4c04-8f41-356261ff8284.png" 
+          src="/lovable-uploads/nihaara-logo.png" 
           alt="Nihaara Architects" 
-          className="h-20 md:h-32 w-auto animate-float"
+          className="h-24 md:h-40 w-auto animate-float"
         />
       </div>
     </div>

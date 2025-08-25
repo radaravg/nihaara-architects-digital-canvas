@@ -30,7 +30,7 @@ const Header = () => {
         <div className="container-custom flex items-center justify-between py-4 md:py-6">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/1479b4ce-2d78-4c04-8f41-356261ff8284.png" 
+              src="/lovable-uploads/nihaara-logo.png" 
               alt="Nihaara Architects" 
               className="h-8 md:h-10 w-auto animate-fade-in"
             />

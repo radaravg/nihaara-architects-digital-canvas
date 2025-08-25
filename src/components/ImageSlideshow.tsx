@@ -18,12 +18,16 @@ const ImageSlideshow = () => {
   }, [images.length]);
 
   return (
-    <div className="fixed inset-0 z-[-1]">
+    <div className="fixed inset-0 z-[-1] overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-2000 ${
-            currentImage === index ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${
+            currentImage === index 
+              ? "translate-x-0" 
+              : index < currentImage 
+                ? "-translate-x-full" 
+                : "translate-x-full"
           }`}
         >
           <img

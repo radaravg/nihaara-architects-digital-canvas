@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
-				bauhaus: ['TC Bauhaus', 'Poppins', 'sans-serif'], // Fallback to Poppins if TC Bauhaus not available
+				bauhaus: ['ITC Bauhaus', 'TC Bauhaus', 'Poppins', 'sans-serif'], // ITC Bauhaus with fallbacks
 			},
 			colors: {
 				border: 'hsl(var(--border))',
