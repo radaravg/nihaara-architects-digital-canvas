@@ -74,9 +74,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className={`relative min-h-screen flex items-center fade-in ${
-                  index % 2 === 0 ? "justify-start" : "justify-end"
-                }`}
+                className="relative min-h-screen flex items-center justify-start fade-in"
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div
@@ -86,17 +84,13 @@ const Services = () => {
                   <div className="absolute inset-0 bg-primary/50" />
                 </div>
                 
-                <div className={`relative z-10 max-w-md p-8 md:p-12 ${
-                  index % 2 === 0 ? "ml-0 md:ml-12" : "mr-0 md:mr-12"
-                }`}>
-                  <div className="bg-background/90 backdrop-blur-sm p-8 rounded-lg">
-                    <h2 className="heading-secondary text-primary mb-4">
-                      {service.title}
-                    </h2>
-                    <p className="body-text text-muted-foreground">
-                      {service.description}
-                    </p>
-                  </div>
+                <div className="relative z-10 max-w-md p-8 md:p-12 ml-0 md:ml-12 text-left">
+                  <h2 className="heading-secondary text-white mb-4">
+                    {service.title}
+                  </h2>
+                  <p className="body-text text-white/90">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             ))}
