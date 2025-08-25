@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+				bauhaus: ['TC Bauhaus', 'Poppins', 'sans-serif'], // Fallback to Poppins if TC Bauhaus not available
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +56,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				architectural: {
+					grey: 'hsl(var(--architectural-grey))',
+					light: 'hsl(var(--architectural-light))'
+				},
+				overlay: {
+					dark: 'hsl(var(--overlay-dark))',
+					light: 'hsl(var(--overlay-light))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +96,62 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(100px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'zoom-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+				'slide-up': 'slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+				'zoom-in': 'zoom-in 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+				'float': 'float 3s ease-in-out infinite',
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'architectural': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+			},
+			transitionDuration: {
+				'smooth': '600ms',
+				'fast': '300ms',
+				'slow': '1200ms',
 			}
 		}
 	},
