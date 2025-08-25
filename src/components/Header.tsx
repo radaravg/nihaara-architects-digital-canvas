@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { MoreHorizontal } from "lucide-react";
 import NavigationMenu from "./NavigationMenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const getPageName = () => {
     switch (location.pathname) {
@@ -29,11 +30,16 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
         <div className="container-custom flex items-center justify-between py-4 md:py-6">
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/nihaara-logo.png" 
-              alt="Nihaara Architects" 
-              className="h-8 md:h-10 w-auto animate-fade-in"
-            />
+            <button 
+              onClick={() => navigate('/')}
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
+              <img 
+                src="/lovable-uploads/nihaara-logo.png" 
+                alt="Nihaara Architects" 
+                className="h-8 md:h-10 w-auto animate-fade-in"
+              />
+            </button>
           </div>
           
           <div className="hidden md:block">
