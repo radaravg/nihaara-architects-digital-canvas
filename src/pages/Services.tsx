@@ -14,16 +14,16 @@ const Services = () => {
       title: "Residential Building",
       description: "Creating homes that blend modern living with timeless design principles.",
       image: arch1,
+      subcategories: [
+        { name: "Contemporary", description: "Modern designs with clean lines and innovative features" },
+        { name: "Colonial", description: "Classic colonial architecture with timeless elegance" },
+        { name: "Traditional", description: "Heritage-inspired homes with cultural authenticity" }
+      ]
     },
     {
       title: "Commercial",
       description: "Innovative commercial spaces that inspire productivity and growth.",
       image: arch2,
-    },
-    {
-      title: "Traditional",
-      description: "Preserving heritage while embracing contemporary functionality.",
-      image: arch3,
     },
     {
       title: "Interior",
@@ -88,9 +88,19 @@ const Services = () => {
                   <h2 className="heading-secondary text-white mb-4">
                     {service.title}
                   </h2>
-                  <p className="body-text text-white/90">
+                  <p className="body-text text-white/90 mb-6">
                     {service.description}
                   </p>
+                  {service.subcategories && (
+                    <div className="space-y-3">
+                      {service.subcategories.map((subcategory, subIndex) => (
+                        <div key={subcategory.name} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                          <h3 className="text-white font-semibold mb-2">{subcategory.name}</h3>
+                          <p className="text-white/80 text-sm">{subcategory.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
