@@ -29,38 +29,23 @@ const Header = () => {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
         <div className="container-custom flex items-center justify-between py-4 md:py-6">
-          <div className="flex items-center">
-            {location.pathname !== "/" && (
-              <button 
-                onClick={() => navigate('/')}
-                className="hover:opacity-80 transition-opacity duration-300"
-              >
-                <img 
-                  src="/lovable-uploads/nihaara-logo.png" 
-                  alt="Nihaara Architects" 
-                  className="h-8 md:h-10 w-auto animate-fade-in"
-                />
-              </button>
-            )}
-          </div>
+          {/* Logo - always left-aligned */}
+          <button 
+            onClick={() => navigate('/')}
+            className="hover:opacity-80 transition-opacity duration-300"
+          >
+            <img 
+              src="/lovable-uploads/nihaara-logo.png" 
+              alt="Nihaara Architects" 
+              className="h-8 md:h-10 w-auto animate-fade-in"
+            />
+          </button>
           
+          {/* Page name - show on all pages */}
           <div className="hidden md:block">
-            {location.pathname === "/" ? (
-              <button 
-                onClick={() => navigate('/')}
-                className="hover:opacity-80 transition-opacity duration-300"
-              >
-                <img 
-                  src="/lovable-uploads/nihaara-logo.png" 
-                  alt="Nihaara Architects" 
-                  className="h-8 md:h-10 w-auto animate-fade-in"
-                />
-              </button>
-            ) : (
-              <span className="body-text font-medium text-muted-foreground">
-                {getPageName()}
-              </span>
-            )}
+            <span className="body-text font-medium text-muted-foreground">
+              {getPageName()}
+            </span>
           </div>
           
           <button

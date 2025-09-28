@@ -20,10 +20,18 @@ const Home = () => {
           <ImageSlideshow />
           
           <div className="relative z-10 min-h-screen flex items-center justify-center">
-            <div className="text-center px-6">
-              <h1 className="tagline text-white animate-fade-in">
-                Edges of today, echoes of tomorrow.
-              </h1>
+            <div className="text-center px-6 max-w-4xl">
+              <div className="mb-8">
+                <p className="text-white/80 text-sm md:text-base tracking-wider uppercase mb-4 animate-fade-in">
+                  ARCHITECTURAL DESIGN STUDIO
+                </p>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  DESIGN MATTERS
+                </h1>
+                <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                  Nihaara is an award winning architectural and interior design studio creating spaces that blend modern innovation with timeless elegance.
+                </p>
+              </div>
             </div>
           </div>
         </div>
